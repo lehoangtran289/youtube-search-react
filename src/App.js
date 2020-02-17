@@ -58,12 +58,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
+        
         <div className="row">
           <div className="col-md-12 text-center">
             <img className="logo" src="/yt_logo_rgb_light.png" alt="" />
             <h1>Search Engine</h1>
           </div>
         </div>
+        
         <div className="row">
           <div className="col-md-12 text-center">
             <form id="search" onSubmit={this.handleFormSubmit}>
@@ -87,6 +89,7 @@ class App extends React.Component {
             </form>
           </div>
         </div>
+        
         <div className="row">
           <div className="col-md-12" id="result-list">
             {this.state.searchResults.map((item, index) => {
@@ -101,6 +104,7 @@ class App extends React.Component {
                     <div className="col-4">
                       <img src={`${item.snippet.thumbnails.medium.url}`} />
                     </div>
+                    
                     <div className="col-8">
                       <div className="video-info">
                         <h2 className="title">{item.snippet.title}</h2>
@@ -113,6 +117,7 @@ class App extends React.Component {
                   </div>
                 </a>
               );
+
             })}
           </div>
         </div>
@@ -135,8 +140,9 @@ class App extends React.Component {
             ) : null}
           </div>
         </div>
+      
       </div>
-    );
+    );  
   }
 }
 
